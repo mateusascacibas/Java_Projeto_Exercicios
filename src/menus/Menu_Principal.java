@@ -1,26 +1,31 @@
 package menus;
 
+import java.io.IOException;
 import java.util.Scanner;
 
+import classes.Exercicios_Classes;
 import collections.Exercicios_Collections;
 import linha.Linha;
 import repeticao.Exercicios_Repeticao;
 import sequencial.Exercicios_Sequencial;
 import vetorMatriz.Exercicios_VetorMatriz;
 import condicional.Exercicios_Condicional;
+import heranca.Exercicios_Heranca;
 
 public class Menu_Principal {
 	
 	
 	public static int op_exercicios;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		Linha linha = new Linha();
 	
 		Scanner teclado = new Scanner(System.in);
-		int op = 0;
+		int op = 1;
 		
+		while(op != 0) {
+			
 		
 		System.out.println(linha.getLinha());
 		System.out.println("Menu Principal");
@@ -35,11 +40,9 @@ public class Menu_Principal {
 		System.out.println(linha.getLinha());
 		System.out.println("5 - Collections");
 		System.out.println(linha.getLinha());
-		System.out.println("6 - Functions");
+		System.out.println("6 - Classe");
 		System.out.println(linha.getLinha());
-		System.out.println("7 - Classe");
-		System.out.println(linha.getLinha());
-		System.out.println("8 - Herenças");
+		System.out.println("7 - Heranças");
 		System.out.println(linha.getLinha());
 		System.out.println("0 - Sair");
 		System.out.println(linha.getLinha());
@@ -71,9 +74,6 @@ public class Menu_Principal {
 				System.out.println(linha.getLinha());
 				if(op_exercicios == 1) {
 					Exercicios_Repeticao.exercicio01();
-				}
-				else if(op_exercicios == 2) {
-					Exercicios_Repeticao.exercicio02();
 				}
 	
 				break;
@@ -113,10 +113,39 @@ public class Menu_Principal {
 				}
 				
 				break;
+				
+			case 6:
+				System.out.println(linha.getLinha());
+				Menu_Classes.getMenuClasses();
+				System.out.println("Digite uma opção: ");
+				op_exercicios = teclado.nextInt();
+				System.out.println(linha.getLinha());
+				if(op_exercicios == 1) {
+					Exercicios_Classes.exercicio01();
+				}
+				break;
+			
+			case 7:
+				System.out.println(linha.getLinha());
+				Menu_Heranca.getMenuHeranca();
+				System.out.println("Digite uma opção: ");
+				op_exercicios = teclado.nextInt();
+				System.out.println(linha.getLinha());
+				if(op_exercicios == 1) {
+					Exercicios_Heranca.exercicio01();
+				}
+				break;
 			case 0:
 				break;
+				
 		}
-	
+		
+		System.out.println("Digite qualquer tecla para continuar.");
+		System.in.read();
 	}
-
+		teclado.close();	
+		System.exit(0);
+		
+}
+		
 }
