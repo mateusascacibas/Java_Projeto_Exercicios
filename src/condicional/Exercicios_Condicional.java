@@ -13,6 +13,7 @@ public class Exercicios_Condicional extends Menu_Principal {
 		System.out.print("1 - Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.\n");
 		System.out.println("Digite o numero: ");
 		num = teclado.nextInt();
+		System.out.println("\n");
 		if(num < 0 ) {
 			System.out.println("Negativo.");
 		}
@@ -26,7 +27,7 @@ public class Exercicios_Condicional extends Menu_Principal {
 		System.out.println("2 - Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar.");
 		System.out.println("Digite o numero: ");
 		num = teclado.nextInt();
-		
+		System.out.println("\n");
 		if(num % 2 == 0 ) {
 			System.out.println("Par.");
 		}
