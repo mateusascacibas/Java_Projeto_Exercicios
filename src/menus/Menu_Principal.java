@@ -72,6 +72,9 @@ public class Menu_Principal {
 				if(op_exercicios == 1) {
 					Exercicios_Repeticao.exercicio01();
 				}
+				else if(op_exercicios == 2) {
+					Exercicios_Repeticao.exercicio02();
+				}
 	
 				break;
 			
