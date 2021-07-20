@@ -1,6 +1,5 @@
 package classes;
 
-
 import java.util.Scanner;
 
 public class Exercicios_Classes {
@@ -14,11 +13,11 @@ static Scanner teclado = new Scanner(System.in);
 		String nome1, nome2;
 		int idade1, idade2;
 		System.out.println("Nome 1: ");
-		nome1 = teclado.next();
+		nome1 = teclado.nextLine();
 		System.out.println("Idade 1: ");
 		idade1 = teclado.nextInt();
 		System.out.println("Nome 2: ");
-		nome2 = teclado.next();
+		nome2 = teclado.nextLine();
 		System.out.println("Idade 2: ");
 		idade2 = teclado.nextInt();
 		
@@ -33,9 +32,70 @@ static Scanner teclado = new Scanner(System.in);
 		else {
 			System.out.println("Mesma idade.");
 		}
-		
-		
-		
-}
-}
+	}
+	
+	public static void exercicio02() {
 
+				int op = 3;
+				ContaCorrente c1 = new ContaCorrente();
+				System.out.print("2 - Fazer um programa para ler os dados bancarios de uma pessoas, depois fornecer ações ao usuarios:\n");
+				System.out.println("Digite o numero da sua conta: ");
+				c1.setNumCC(teclado.nextInt());
+				System.out.println("Digite seu saldo: ");
+				c1.setSaldo(teclado.nextDouble());
+				while(op != 0) {
+					
+				
+				System.out.println("Digite 1 para Sacar \n2 para Depositar \n3 para checar seu saldo\n0 para sair: ");
+				op = teclado.nextInt();
+					if(op == 1) {
+					System.out.println("Digite o valor a ser sacado: ");
+					c1.sacar(teclado.nextDouble());
+					System.out.println("Saque feito com sucesso.");
+				}
+				else if(op == 2) {
+					System.out.println("Digite o valor a ser depositado: ");
+					c1.depositar(teclado.nextDouble());
+					System.out.println("Deposito feito com sucesso.");
+				}
+				else if(op == 3) {
+					System.out.println("Saldo atual: " + c1.getSaldo());
+				}
+				else if(op == 0) {
+					System.out.println("Saindo.");
+				}
+				else {
+					System.out.println("Opção invalida.");
+				}
+			
+			}
+			
+		}
+	
+	public static void exercicio03() {
+				// TODO Auto-generated method stub
+				Funcionario F01 = new Funcionario();
+				Funcionario F02 = new Funcionario(1105, "Jose Carlos Silva", 6500.00);
+				F01.setCodFunc(1200);
+				F01.setNomeFunc("Maria Antonia Guimarães");
+				F01.setSalarioMensal(8600.00);
+				
+				System.out.println("3 - Exercicio de dados dos funcionarios");
+				
+				System.out.println(F01.getCodFunc() + "\t\t" + F01.getNomeFunc() + "\t\t" + F01.getSalarioMensal());
+
+				System.out.println(F02.getCodFunc() + "\t\t" + F02.getNomeFunc() + "\t\t" + F02.getSalarioMensal());
+				System.out.printf(F01.getCodFunc() + "\t\t" + "%.2f", F01.getSalarioAnual());
+				System.out.printf("\n" + F02.getCodFunc() + "\t\t" + "%.2f", F02.getSalarioAnual());
+				
+				F01.setAumento(15);
+				F02.setAumento(15);
+				
+				System.out.println("\n Após aumento ");
+				System.out.printf("\n" +F01.getCodFunc() + "\t\t" + "%.2f", F01.getSalarioAnual());
+				System.out.printf("\n" + F02.getCodFunc() + "\t\t" + "%.2f", F02.getSalarioAnual());
+				System.out.println("\n");
+					
+			}
+
+	}
