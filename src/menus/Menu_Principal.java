@@ -122,6 +122,9 @@ public class Menu_Principal {
 				else if(op_exercicios == 2) {
 					Exercicios_Classes.exercicio02();
 				}
+				else if(op_exercicios == 3) {
+					Exercicios_Classes.exercicio03();
+				}
 				break;
 
 			case 7:

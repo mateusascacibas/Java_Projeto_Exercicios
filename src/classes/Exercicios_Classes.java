@@ -70,7 +70,32 @@ static Scanner teclado = new Scanner(System.in);
 			
 			}
 			
-			
 		}
+	
+	public static void exercicio03() {
+				// TODO Auto-generated method stub
+				Funcionario F01 = new Funcionario();
+				Funcionario F02 = new Funcionario(1105, "Jose Carlos Silva", 6500.00);
+				F01.setCodFunc(1200);
+				F01.setNomeFunc("Maria Antonia Guimarães");
+				F01.setSalarioMensal(8600.00);
+				
+				System.out.println("3 - Exercicio de dados dos funcionarios");
+				
+				System.out.println(F01.getCodFunc() + "\t\t" + F01.getNomeFunc() + "\t\t" + F01.getSalarioMensal());
 
-}
+				System.out.println(F02.getCodFunc() + "\t\t" + F02.getNomeFunc() + "\t\t" + F02.getSalarioMensal());
+				System.out.printf(F01.getCodFunc() + "\t\t" + "%.2f", F01.getSalarioAnual());
+				System.out.printf("\n" + F02.getCodFunc() + "\t\t" + "%.2f", F02.getSalarioAnual());
+				
+				F01.setAumento(15);
+				F02.setAumento(15);
+				
+				System.out.println("\n Após aumento ");
+				System.out.printf("\n" +F01.getCodFunc() + "\t\t" + "%.2f", F01.getSalarioAnual());
+				System.out.printf("\n" + F02.getCodFunc() + "\t\t" + "%.2f", F02.getSalarioAnual());
+				System.out.println("\n");
+					
+			}
+
+	}
