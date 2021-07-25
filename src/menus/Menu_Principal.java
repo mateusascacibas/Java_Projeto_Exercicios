@@ -1,6 +1,7 @@
 package menus;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import classes.Exercicios_Classes;
@@ -14,140 +15,167 @@ import heranca.Exercicios_Heranca;
 
 public class Menu_Principal {
 
-	public static int op_exercicios;
-
+	public static int op_exercicios = 1;
+	public static int op = 1;
+	public static int op_principal = 1;
+	public static boolean ok = false;
+	public static boolean ok_opcoes = false;
+	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		Linha linha = new Linha();
 
+		Linha linha = new Linha();
+		MenuOpcoes menu = new MenuOpcoes();
 		Scanner teclado = new Scanner(System.in);
-		int op = 1;
+
+	while(op_principal != 0) {
+		while (!ok) {
+			menu.mostraMenu();
+			try {
+				System.out.println("Digite uma opção: ");
+				op_principal = teclado.nextInt();
+				if (op_principal < 8) {
+					ok = true;
+				} else {
+					System.out.println("Digite uma opção valida.");
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("Somente é suportado numeros inteiro!");
+				teclado.nextLine();
+			}
+
+			if (op_principal == 0) {
+				op = 0;
+				System.out.println("Parando programa.");
+				break;
+			}
+		}
 
 		while (op != 0) {
-			System.out.println(linha.getLinha());
-			System.out.println("Menu Principal");
-			System.out.println(linha.getLinha());
-			System.out.println("1 - Condicional");
-			System.out.println(linha.getLinha());
-			System.out.println("2 - Repeticao");
-			System.out.println(linha.getLinha());
-			System.out.println("3 - Vetor e Matriz");
-			System.out.println(linha.getLinha());
-			System.out.println("4 - Sequencial");
-			System.out.println(linha.getLinha());
-			System.out.println("5 - Collections");
-			System.out.println(linha.getLinha());
-			System.out.println("6 - Classe");
-			System.out.println(linha.getLinha());
-			System.out.println("7 - Heranças");
-			System.out.println(linha.getLinha());
-			System.out.println("0 - Sair");
-			System.out.println(linha.getLinha());
-			System.out.println("Digite uma opção: ");
-
-			op = teclado.nextInt();
-			System.out.println("\n");
-
-			switch (op) {
+			switch (op_principal) {
 			case 1:
-				System.out.println(linha.getLinha());
-				Menu_Condicional.getMenuCondicional();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_Condicional.exercicio01();
-				} else if (op_exercicios == 2) {
-					Exercicios_Condicional.exercicio02();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_Condicional.getMenuCondicional();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
+						System.out.println(linha.getLinha());
+						Exercicios_Condicional.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiro!");
+						teclado.nextLine();
+					}
 				}
-
-				break;
 			case 2:
-				System.out.println(linha.getLinha());
-				Menu_Repeticao.getMenu_Repeticao();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_Repeticao.exercicio01();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_Repeticao.getMenu_Repeticao();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
+						System.out.println(linha.getLinha());
+						Exercicios_Repeticao.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiros!");
+						teclado.nextLine();
+					}
 				}
-
 				break;
 
 			case 3:
-				System.out.println(linha.getLinha());
-				Menu_VetorMatriz.getMenu_VetorMatriz();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_VetorMatriz.exercicio01();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_VetorMatriz.getMenu_VetorMatriz();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
+						System.out.println(linha.getLinha());
+						Exercicios_VetorMatriz.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiros!");
+						teclado.nextLine();
+					}
 				}
-
 				break;
 
 			case 4:
-				System.out.println(linha.getLinha());
-				Menu_Sequencial.getMenu_Sequencial();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_Sequencial.exercicio01();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_Sequencial.getMenu_Sequencial();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
+						System.out.println(linha.getLinha());
+						Exercicios_Sequencial.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiros!");
+						teclado.nextLine();
+					}
 				}
-
 				break;
-
 			case 5:
-				System.out.println(linha.getLinha());
-				Menu_Collections.getMenuCollections();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_Collections.exercicio01();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_Collections.getMenuCollections();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						System.out.println(linha.getLinha());
+						Exercicios_Collections.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiros!");
+						teclado.nextLine();
+					}
 				}
-
 				break;
 
 			case 6:
-				System.out.println(linha.getLinha());
-				Menu_Classes.getMenuClasses();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_Classes.exercicio01();
-				}
-				else if(op_exercicios == 2) {
-					Exercicios_Classes.exercicio02();
-				}
-				else if(op_exercicios == 3) {
-					Exercicios_Classes.exercicio03();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_Classes.getMenuClasses();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						System.out.println(linha.getLinha());
+						Exercicios_Classes.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiros!");
+						teclado.nextLine();
+					}
 				}
 				break;
 
 			case 7:
-				System.out.println(linha.getLinha());
-				Menu_Heranca.getMenuHeranca();
-				System.out.println("Digite uma opção: ");
-				op_exercicios = teclado.nextInt();
-				System.out.println(linha.getLinha());
-				if (op_exercicios == 1) {
-					Exercicios_Heranca.exercicio01();
+				while (!ok_opcoes) {
+					System.out.println(linha.getLinha());
+					Menu_Heranca.getMenuHeranca();
+					try {
+						System.out.println("Digite uma opção: ");
+						op_exercicios = teclado.nextInt();
+						System.out.println(linha.getLinha());
+						Exercicios_Heranca.MostrarExercicios();
+					} catch (InputMismatchException e) {
+						System.out.println("Somente é suportado numeros inteiros!");
+						teclado.nextLine();
+					}
 				}
 				break;
 			case 0:
+				System.out.println("Saindo...");
 				break;
-
+			default:
+				System.out.print("Digite um opção valida: ");
+				op = teclado.nextInt();
+				break;
 			}
-
-			System.out.println("Digite qualquer tecla para continuar.");
-			System.in.read();
 		}
-		teclado.close();
-		System.exit(0);
-
 	}
-
+		System.out.println("\n");
+		teclado.close();
+	}
 }

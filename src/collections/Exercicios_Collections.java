@@ -1,11 +1,14 @@
 package collections;
 
 import java.util.Scanner;
+
+import menus.Menu_Principal;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
 
-public class Exercicios_Collections {
+public class Exercicios_Collections extends Menu_Principal{
 	static int num;
 	static Scanner teclado = new Scanner(System.in);
 	
@@ -26,5 +29,18 @@ public class Exercicios_Collections {
 			
 		}
 		
+	}
+
+	public static void MostrarExercicios() {
+		if (op_exercicios == 1) {
+			Exercicios_Collections.exercicio01();
+		} else if (op_exercicios == 0) {
+			System.out.println("Saindo.");
+			ok = false;
+			op = 0;
+		} else {
+			System.out.println("Digite um opção valida.");
+			ok_opcoes = false;
+		}
 	}
 }

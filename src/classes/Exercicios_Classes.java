@@ -2,7 +2,9 @@ package classes;
 
 import java.util.Scanner;
 
-public class Exercicios_Classes {
+import menus.Menu_Principal;
+
+public class Exercicios_Classes extends Menu_Principal{
 static Scanner teclado = new Scanner(System.in);
 	
 	
@@ -98,4 +100,20 @@ static Scanner teclado = new Scanner(System.in);
 					
 			}
 
+	public static void MostrarExercicios() {
+		if (op_exercicios == 1) {
+			Exercicios_Classes.exercicio01();
+		} else if (op_exercicios == 2) {
+			Exercicios_Classes.exercicio02();
+		} else if (op_exercicios == 3) {
+			Exercicios_Classes.exercicio03();
+		} else if (op_exercicios == 0) {
+			System.out.println("Saindo.");
+			ok = false;
+			op = 0;
+		} else {
+			System.out.println("Digite um opção valida.");
+			ok_opcoes = false;
+		}
 	}
+}
