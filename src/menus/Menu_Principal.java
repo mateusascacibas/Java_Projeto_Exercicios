@@ -36,6 +36,8 @@ public class Menu_Principal {
 				op_principal = teclado.nextInt();
 				if (op_principal < 8) {
 					ok = true;
+					ok_opcoes = false;
+					op = 1;
 				} else {
 					System.out.println("Digite uma opção valida.");
 				}
