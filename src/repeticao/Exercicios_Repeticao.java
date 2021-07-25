@@ -20,4 +20,16 @@ public class Exercicios_Repeticao extends Menu_Principal {
 		
 	}
 	
+	public static void MostrarExercicios() {
+		if (op_exercicios == 1) {
+			Exercicios_Repeticao.exercicio01();
+		} else if (op_exercicios == 0) {
+			System.out.println("Saindo.");
+			ok = false;
+			op = 0;
+		} else {
+			System.out.println("Digite um opção valida.");
+			ok_opcoes = false;
+		}
+	}
 }

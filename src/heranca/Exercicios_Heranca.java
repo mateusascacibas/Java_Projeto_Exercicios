@@ -2,13 +2,15 @@ package heranca;
 
 import java.util.Scanner;
 
-public class Exercicios_Heranca {
+import menus.Menu_Principal;
+
+public class Exercicios_Heranca extends Menu_Principal{
 	static int num;
 	static Scanner teclado = new Scanner(System.in);
 	
 	
 	public static void exercicio01() {
-		System.out.print("1 -Escreva um código em Java que apresente a classe pessoa, com atributos Nome , endereço e telefone, e o metodo imprimir.\n");
+		System.out.print("1 -Escreva um código em Java que apresente a classe pessoa, com atributos Nome, endereço e telefone, e o metodo imprimir.\n");
 		Pessoa p1 = new Pessoa();
 		p1.setNome("Mateus");
 		p1.setEndereco("Rua Ascacibas");
@@ -25,5 +27,18 @@ public class Exercicios_Heranca {
 		
 		
 		
+	}
+
+	public static void MostrarExercicios() {
+		if (op_exercicios == 1) {
+			Exercicios_Heranca.exercicio01();
+		} else if (op_exercicios == 0) {
+			System.out.println("Saindo.");
+			ok = false;
+			op = 0;
+		} else {
+			System.out.println("Digite um opção valida.");
+			ok_opcoes = false;
+		}
 	}
 }
