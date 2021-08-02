@@ -42,7 +42,7 @@ public class Menu_Principal {
 					System.out.println("Digite uma opção valida.");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Somente é suportado numeros inteiro!");
+				System.out.println("Somente é suportado numeros inteiros!");
 				teclado.nextLine();
 			}
 
@@ -127,6 +127,7 @@ public class Menu_Principal {
 					try {
 						System.out.println("Digite uma opção: ");
 						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
 						System.out.println(linha.getLinha());
 						Exercicios_Collections.MostrarExercicios();
 					} catch (InputMismatchException e) {
@@ -143,6 +144,7 @@ public class Menu_Principal {
 					try {
 						System.out.println("Digite uma opção: ");
 						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
 						System.out.println(linha.getLinha());
 						Exercicios_Classes.MostrarExercicios();
 					} catch (InputMismatchException e) {
@@ -159,6 +161,7 @@ public class Menu_Principal {
 					try {
 						System.out.println("Digite uma opção: ");
 						op_exercicios = teclado.nextInt();
+						ok_opcoes = true;
 						System.out.println(linha.getLinha());
 						Exercicios_Heranca.MostrarExercicios();
 					} catch (InputMismatchException e) {
