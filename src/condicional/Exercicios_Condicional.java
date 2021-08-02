@@ -71,6 +71,8 @@ public class Exercicios_Condicional extends Menu_Principal {
 		
 		if (op_exercicios == 1) {
 			Exercicios_Condicional.exercicio01();
+			ok = false;
+			op = 0;
 		} else if (op_exercicios == 2) {
 			Exercicios_Condicional.exercicio02();
 		} else if (op_exercicios == 3) {
