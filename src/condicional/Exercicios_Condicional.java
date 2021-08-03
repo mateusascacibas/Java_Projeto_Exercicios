@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 import menus.Menu_Principal;
 
+
+
 public class Exercicios_Condicional extends Menu_Principal {
 	static int num, A,B, horaInicial, horaFinal;
 	static Scanner teclado = new Scanner(System.in);
-	
+
 	
 	public static void exercicio01() {
 		System.out.print("1 - Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.\n");
@@ -75,10 +77,16 @@ public class Exercicios_Condicional extends Menu_Principal {
 			op = 0;
 		} else if (op_exercicios == 2) {
 			Exercicios_Condicional.exercicio02();
+			ok = false;
+			op = 0;
 		} else if (op_exercicios == 3) {
 			Exercicios_Condicional.exercicio03();
+			ok = false;
+			op = 0;
 		} else if (op_exercicios == 4) {
 			Exercicios_Condicional.exercicio04();
+			ok = false;
+			op = 0;
 		} else if (op_exercicios == 0) {
 			System.out.println("Saindo.");
 			ok = false;
