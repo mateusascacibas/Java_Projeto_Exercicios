@@ -28,6 +28,8 @@ public class Exercicios_VetorMatriz  extends Menu_Principal {
 	public static void MostrarExercicios() {
 		if (op_exercicios == 1) {
 			Exercicios_VetorMatriz.exercicio01();
+			ok = false;
+			op = 0;
 		} else if (op_exercicios == 0) {
 			System.out.println("Saindo.");
 			ok = false;
