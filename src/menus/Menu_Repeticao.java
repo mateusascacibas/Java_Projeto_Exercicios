@@ -7,10 +7,11 @@ import linha.Linha;
 public class Menu_Repeticao {
 	public static String getMenu_Repeticao() {
 		Linha linha = new Linha();
-		System.out.println("Menu Repetição");
+		System.out.println("Menu Repetiï¿½ï¿½o");
 		System.out.println(linha.getLinha());
-		System.out.println("1 - Faça um programa que determine e mostre os cinco primeiros multiplos de 3, considerando números maiores que 0\n"
-				+ "0 - Sair");
+		System.out.println("1 - Faï¿½a um programa que determine e mostre os cinco primeiros multiplos de 3, considerando nï¿½meros maiores que 0\n"
+				+ "2- Digite um nÃºmero de 1 a 100 e tente adivinhar ele, vocÃª tem 5 chances! \n" +
+				"0 - Sair");
 		return null;
 	}
 }
