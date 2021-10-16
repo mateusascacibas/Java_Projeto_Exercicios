@@ -21,10 +21,7 @@ public class Exercicios_Repeticao extends Menu_Principal {
 	}
 	
 	public static void exercicio02() {
-		boolean tentativas = false;
 		int valor = (int) (Math.random() * 101);
-		int cp1 = 0x50;
-		int cp2 = 0x06f8;
 
 		System.out.println("");
 		System.out.println("BEM VINDO AO PROGRAMA DE SORTEIO DE NÚMEROS");
@@ -33,13 +30,11 @@ public class Exercicios_Repeticao extends Menu_Principal {
 		System.out.println("");
 
 		for (int i = 0; i < 5; i++) {
-			Scanner st1 = new Scanner(System.in);
 			System.out.println("Digite um número: ");
-			int sorteio = st1.nextInt();
+			int sorteio = teclado.nextInt();
 
 			if (sorteio == valor) {
 				System.out.println("Você Acertou, Parabéns!");
-				tentativas = true;
 				break;
 			} else {
 				if (sorteio < valor) {
