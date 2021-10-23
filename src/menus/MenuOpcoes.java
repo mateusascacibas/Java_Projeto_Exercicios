@@ -20,7 +20,7 @@ public class MenuOpcoes {
 		System.out.println(linha.getLinha());
 		System.out.println("6 - Classe");
 		System.out.println(linha.getLinha());
-		System.out.println("7 - Heranças");
+		System.out.println("7 - Heranca");
 		System.out.println(linha.getLinha());
 		System.out.println("0 - Sair");
 		System.out.println(linha.getLinha());

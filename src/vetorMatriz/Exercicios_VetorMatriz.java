@@ -10,7 +10,7 @@ public class Exercicios_VetorMatriz  extends Menu_Principal {
 	
 	
 	public static void exercicio01() {
-		System.out.print("1 - Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos");
+		System.out.print("1 - Crie um programa que le 6 valores inteiros e, em seguida, mostre na tela os valores lidos");
 		int vetor[] = new int[6];
 		int i = 0;
 		int j = 0;
@@ -21,7 +21,7 @@ public class Exercicios_VetorMatriz  extends Menu_Principal {
 		}
 		System.out.println("\n");
 		while(j < 5) {
-			System.out.println("Valor " + i + " é " + vetor[j]);
+			System.out.println("Valor " + i + " = " + vetor[j]);
 		}
 }
 
@@ -35,7 +35,7 @@ public class Exercicios_VetorMatriz  extends Menu_Principal {
 			ok = false;
 			op = 0;
 		} else {
-			System.out.println("Digite um opção valida.");
+			System.out.println("Digite um opcao valida.");
 			ok_opcoes = false;
 		}
 	}

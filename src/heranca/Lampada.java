@@ -10,7 +10,7 @@ public class Lampada {
 	
 	public void ligar() {
 		if(this.ligada) {
-			System.out.println("Lampada já está ligada!");
+			System.out.println("Lampada ja está ligada!");
 		}
 		else {
 			this.ligada = true;
@@ -19,7 +19,7 @@ public class Lampada {
 	
 	public void desligar() {
 		if(!this.ligada) {
-			System.out.println("Lampada já está desligada");
+			System.out.println("Lampada ja esta desligada");
 		}
 		else {
 			this.ligada = false;
@@ -32,7 +32,7 @@ public class Lampada {
 		else {
 			status = "Desligada";
 		}
-		System.out.println("Lampada atualmente está: " +  status);
+		System.out.println("Lampada atualmente esta: " +  status);
 		
 	}
 

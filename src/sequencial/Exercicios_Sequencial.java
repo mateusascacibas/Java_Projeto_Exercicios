@@ -12,7 +12,7 @@ public class Exercicios_Sequencial extends Menu_Principal {
 	public static void exercicio01() {
 		int n1, n2;
 		
-			System.out.print("1 - Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma\r\n"
+			System.out.print("1 - Faca um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses numeros com uma\r\n"
 				+ "mensagem explicativa, conforme exemplos.\n");
 			System.out.println("Primeiro numero: ");
 			n1 = teclado.nextInt();

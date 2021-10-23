@@ -16,7 +16,7 @@ public class Exercicios_Collections extends Menu_Principal{
 	public static void exercicio01() {
 		Collection<Integer> num = new ArrayList<Integer>();
 		int i = 0;
-		System.out.print("1 - Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos\n");
+		System.out.print("1 - Crie um programa que le 6 valores inteiros e, em seguida, mostre na tela os valores lidos\n");
 		while (i < 6) {
 			System.out.println("Digite o numero: ");
 			num.add(teclado.nextInt()); 
@@ -41,7 +41,7 @@ public class Exercicios_Collections extends Menu_Principal{
 			ok = false;
 			op = 0;
 		} else {
-			System.out.println("Digite um opção valida.");
+			System.out.println("Digite um opcao valida.");
 			ok_opcoes = false;
 		}
 	}

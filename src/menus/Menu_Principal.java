@@ -32,17 +32,17 @@ public class Menu_Principal {
 			while (!ok) {
 				menu.mostraMenu();
 				try {
-					System.out.println("Digite uma opção: ");
+					System.out.println("Digite uma opcao: ");
 					op_principal = teclado.nextInt();
 					if (op_principal < 8) {
 						ok = true;
 						ok_opcoes = false;
 						op = 1;
 					} else {
-						System.out.println("Digite uma opção valida.");
+						System.out.println("Digite uma opcao valida.");
 					}
 				} catch (InputMismatchException e) {
-					System.out.println("Somente é suportado numeros inteiros!");
+					System.out.println("Somente e suportado numeros inteiros!");
 					teclado.nextLine();
 				}
 
@@ -61,13 +61,13 @@ public class Menu_Principal {
 						Menu_Condicional.getMenuCondicional();
 						try {
 
-							System.out.println("Digite uma opção: ");
+							System.out.println("Digite uma opcao: ");
 							op_exercicios = teclado.nextInt();
 							ok_opcoes = true;
 							System.out.println(linha.getLinha());
 							Exercicios_Condicional.MostrarExercicios();
 						} catch (InputMismatchException e) {
-							System.out.println("Somente é suportado numeros inteiros!");
+							System.out.println("Somente e suportado numeros inteiros!");
 							teclado.nextLine();
 						}
 					}
@@ -76,13 +76,13 @@ public class Menu_Principal {
 						System.out.println(linha.getLinha());
 						Menu_Repeticao.getMenu_Repeticao();
 						try {
-							System.out.println("Digite uma opção: ");
+							System.out.println("Digite uma opcao: ");
 							op_exercicios = teclado.nextInt();
 							ok_opcoes = true;
 							System.out.println(linha.getLinha());
 							Exercicios_Repeticao.MostrarExercicios();
 						} catch (InputMismatchException e) {
-							System.out.println("Somente é suportado numeros inteiros!");
+							System.out.println("Somente e suportado numeros inteiros!");
 							teclado.nextLine();
 						}
 					}
@@ -126,13 +126,13 @@ public class Menu_Principal {
 						System.out.println(linha.getLinha());
 						Menu_Collections.getMenuCollections();
 						try {
-							System.out.println("Digite uma opção: ");
+							System.out.println("Digite uma opcao: ");
 							op_exercicios = teclado.nextInt();
 							ok_opcoes = true;
 							System.out.println(linha.getLinha());
 							Exercicios_Collections.MostrarExercicios();
 						} catch (InputMismatchException e) {
-							System.out.println("Somente é suportado numeros inteiros!");
+							System.out.println("Somente e suportado numeros inteiros!");
 							teclado.nextLine();
 						}
 					}
@@ -143,13 +143,13 @@ public class Menu_Principal {
 						System.out.println(linha.getLinha());
 						Menu_Classes.getMenuClasses();
 						try {
-							System.out.println("Digite uma opção: ");
+							System.out.println("Digite uma opcao: ");
 							op_exercicios = teclado.nextInt();
 							ok_opcoes = true;
 							System.out.println(linha.getLinha());
 							Exercicios_Classes.MostrarExercicios();
 						} catch (InputMismatchException e) {
-							System.out.println("Somente é suportado numeros inteiros!");
+							System.out.println("Somente e suportado numeros inteiros!");
 							teclado.nextLine();
 						}
 					}
@@ -166,7 +166,7 @@ public class Menu_Principal {
 							System.out.println(linha.getLinha());
 							Exercicios_Heranca.MostrarExercicios();
 						} catch (InputMismatchException e) {
-							System.out.println("Somente é suportado numeros inteiros!");
+							System.out.println("Somente e suportado numeros inteiros!");
 							teclado.nextLine();
 						}
 					}
@@ -175,7 +175,7 @@ public class Menu_Principal {
 					System.out.println("Saindo...");
 					break;
 				default:
-					System.out.print("Digite um opção valida: ");
+					System.out.print("Digite um opcao valida: ");
 					op = teclado.nextInt();
 					break;
 				}
