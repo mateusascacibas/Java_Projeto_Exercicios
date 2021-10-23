@@ -8,32 +8,39 @@ public class Exercicios_Classes extends Menu_Principal{
 static Scanner teclado = new Scanner(System.in);
 	
 	
-	public static void exercicio01() {
+	public static String exercicio01() {
 		
 		System.out.print("1 - Fazer um programa para ler os dados de duas pessoas, depois mostrar o nome da pessoa mais\r\n"
 				+ "velha.\n");
 		String nome1, nome2;
 		int idade1, idade2;
+		teclado.nextLine();
 		System.out.println("Nome 1: ");
 		nome1 = teclado.nextLine();
 		System.out.println("Idade 1: ");
 		idade1 = teclado.nextInt();
 		System.out.println("Nome 2: ");
+		teclado.next();
 		nome2 = teclado.nextLine();
 		System.out.println("Idade 2: ");
 		idade2 = teclado.nextInt();
 		
 		Pessoas p1 = new Pessoas(nome1, idade1);
 		Pessoas p2 = new Pessoas(nome2, idade2);
+		
 		if(idade1 > idade2) {
-			System.out.println("O(A) " + p1.getNome() +" é o mais velho(a).");
+			System.out.println("O(A) " + p1.getNome() +" e o mais velho(a).");
+			return p1.getNome();
 		}
 		else if(idade2 > idade1) {
-			System.out.println("O(A) " + p2.getNome() + " é o mais velho(a).");
+			System.out.println("O(A) " + p2.getNome() + " e o mais velho(a).");
+			return p2.getNome();
 		}
 		else {
 			System.out.println("Mesma idade.");
+			return "igual";
 		}
+		
 	}
 	
 	public static void exercicio02() {

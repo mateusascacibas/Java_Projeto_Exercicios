@@ -9,14 +9,17 @@ public class Exercicios_Repeticao extends Menu_Principal {
 	static Scanner teclado = new Scanner(System.in);
 	
 	
-	public static void exercicio01() {
-		System.out.print("1 - Fa�a um programa que determine e mostre os cinco primeiros multiplos de 3, considerando n�meros maiores que 0\n");
+	public static int exercicio01() {
+		int contador = 0;
+		System.out.print("1 - Faca um programa que determine e mostre os cinco primeiros multiplos de 3, considerando numeros maiores que 0\n");
 		System.out.println("\n");
 		int i = 1;
 		while (i <= 5){
 			System.out.println(i*3);
+			contador += i*3;
 			i = i+1;
 		}
+		return contador;
 		
 	}
 	
@@ -24,29 +27,29 @@ public class Exercicios_Repeticao extends Menu_Principal {
 		int valor = (int) (Math.random() * 101);
 
 		System.out.println("");
-		System.out.println("BEM VINDO AO PROGRAMA DE SORTEIO DE NÚMEROS");
-		System.out.println("Digite um número de 1 a 100 e tente adivinhar ele, você tem 5 chances!");
+		System.out.println("BEM VINDO AO PROGRAMA DE SORTEIO DE NUMEROS");
+		System.out.println("Digite um numero de 1 a 100 e tente adivinhar ele, voce tem 5 chances!");
 		System.out.println("");
 		System.out.println("");
 
 		for (int i = 0; i < 5; i++) {
-			System.out.println("Digite um número: ");
+			System.out.println("Digite um numero: ");
 			int sorteio = teclado.nextInt();
 
 			if (sorteio == valor) {
-				System.out.println("Você Acertou, Parabéns!");
+				System.out.println("Voce Acertou, Parabens!");
 				break;
 			} else {
 				if (sorteio < valor) {
-					System.out.println("O número digitado é MENOR que o valor pedido!");
+					System.out.println("O numero digitado foi MENOR que o valor pedido!");
 					System.out.println("Tente novamente");
 				} else if (sorteio > valor) {
-					System.out.println("O número digitado é MAIOR que o valor pedido!");
+					System.out.println("O numero digitado foi MAIOR que o valor pedido!");
 					System.out.println("Tente novamente");
 				}
 			}
 		}
-		System.out.println("Você não conseguiu :(");
+		System.out.println("Voce nao conseguiu :(");
 	}
 	
 	public static void MostrarExercicios() {
@@ -64,7 +67,7 @@ public class Exercicios_Repeticao extends Menu_Principal {
 			ok = false;
 			op = 0;
 		} else {
-			System.out.println("Digite um opção valida.");
+			System.out.println("Digite uma opcao valida.");
 			ok_opcoes = false;
 		}
 	}

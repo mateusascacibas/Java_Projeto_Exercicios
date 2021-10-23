@@ -27,7 +27,7 @@ public class Elevador {
 			this.pessoasDentro -= 1;
 		}
 		else {
-			System.out.println("Elevador já está vazio!");
+			System.out.println("Elevador ja esta vazio!");
 		}
 	}
 	
@@ -36,7 +36,7 @@ public class Elevador {
 			this.andarAtual += 1;
 		}
 		else {
-			System.out.println("Elevador já está no ultimo andar!");
+			System.out.println("Elevador ja esta no ultimo andar!");
 		}
 	}
 	
@@ -45,7 +45,7 @@ public class Elevador {
 			this.andarAtual -= 1;
 		}
 		else {
-			System.out.println("Elevador já está no terreo!");
+			System.out.println("Elevador ja esta no terreo!");
 		}
 	}
 	

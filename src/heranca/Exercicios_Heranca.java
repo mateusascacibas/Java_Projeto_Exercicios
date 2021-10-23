@@ -12,7 +12,7 @@ public class Exercicios_Heranca extends Menu_Principal{
 	
 	
 	public static void exercicio01() {
-		System.out.print("1 -Escreva um código em Java que apresente a classe pessoa, com atributos Nome, endereço e telefone, e o metodo imprimir.\n");
+		System.out.print("1 -Escreva um código em Java que apresente a classe pessoa, com atributos Nome, endereco e telefone, e o metodo imprimir.\n");
 		Pessoa p1 = new Pessoa();
 		p1.setNome("Mateus");
 		p1.setEndereco("Rua Ascacibas");
