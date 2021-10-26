@@ -20,8 +20,7 @@ public class Exercicios_Sequencial extends Menu_Principal {
 			n2 = teclado.nextInt();
 			System.out.println("\n");
 			System.out.println("Soma: " + (n1 + n2));
-			
-		
+	
 	}
 
 	public static void MostrarExercicios() {
